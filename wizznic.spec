@@ -32,7 +32,7 @@ It is made very easy for non-programmers to contribute Levels/Graphics and sound
 
 %build
 export CFLAGS="$RPM_OPT_FLAGS"
-make DATADIR="%{_gamesdatadir}/%{name}" %{?_smp_mflags} -f Makefile.linux
+%make DATADIR="%{_gamesdatadir}/%{name}" %{?_smp_mflags} -f Makefile.linux
 
 # Removing userlevels directory, this one will be created in the user's home
 # rmdir data/userlevels
@@ -41,7 +41,7 @@ make DATADIR="%{_gamesdatadir}/%{name}" %{?_smp_mflags} -f Makefile.linux
 echo -e "#!/bin/bash\ncd %{_gamesdatadir}/%{name}/\n%{_bindir}/%{name}-bin \$*\n" > %{name}-wrapper.sh
 
 %install
-make DESTDIR="%{buildroot}" DATADIR="%{buildroot}/%{_gamesdatadir}/%{name}" -f Makefile.linux install
+make install DESTDIR=%{buildroot}%{_gamesdatadir}/%{name} -f Makefile.linux
 # Remove doc, as it will be included later
 rm %{buildroot}/%{_gamesdatadir}/%{name}/data/media-licenses.txt
 install -D -m 644 %{S:1} %{buildroot}/%{_gamesdatadir}/applications/%{name}.desktop
