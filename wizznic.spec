@@ -41,7 +41,7 @@ make DATADIR="%{_gamesdatadir}/%{name}" %{?_smp_mflags} -f Makefile.linux
 echo -e "#!/bin/bash\ncd %{_gamesdatadir}/%{name}/\n%{_bindir}/%{name}-bin \$*\n" > %{name}-wrapper.sh
 
 %install
-make DESTDIR="%{buildroot}" DATADIR="%{_gamesdatadir}/%{name}" -f Makefile.linux install
+make DESTDIR="%{buildroot}" DATADIR="%{buildroot}/%{_gamesdatadir}/%{name}" -f Makefile.linux install
 # Remove doc, as it will be included later
 rm %{buildroot}/%{_gamesdatadir}/%{name}/data/media-licenses.txt
 install -D -m 644 %{S:1} %{buildroot}/%{_gamesdatadir}/applications/%{name}.desktop
