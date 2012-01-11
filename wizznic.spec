@@ -47,16 +47,11 @@ install -D -m 644 %{S:1} %{buildroot}/%{_gamesdatadir}/applications/%{name}.desk
 install -d -D -m 755 %{buildroot}/%{_gamesdatadir}/pixmaps/
 ln -s %{_gamesdatadir}/%{name}/data/wmicon.png %{buildroot}/%{_gamesdatadir}/pixmaps/%{name}.png
 
-# install wrapper script
-mv %{buildroot}/%{_gamesbindir}/%{name} %{buildroot}/%{_gamesbindir}/%{name}-bin
-install -D -m 755 %{name}-wrapper.sh %{buildroot}/%{_gamesbindir}/%{name}
-
 
 %files
 %defattr(-,root,root,-)
 %doc changelog.txt readme.txt
 %{_gamesbindir}/%{name}
-%{_gamesbindir}/%{name}-bin
 %dir %{_gamesdatadir}/%{name}/
 %{_gamesdatadir}/%{name}/*
 %{_gamesdatadir}/applications/%{name}.desktop
