@@ -38,7 +38,7 @@ export CFLAGS="$RPM_OPT_FLAGS"
 # rmdir data/userlevels
 
 # Create wrapper script
-echo -e "#!/bin/bash\ncd %{_gamesdatadir}/%{name}/\n%{_bindir}/%{name}-bin \$*\n" > %{name}-wrapper.sh
+echo -e "#!/bin/bash\ncd %{_gamesdatadir}/%{name}/\n%{_gamesbindir}/%{name}-bin \$*\n" > %{name}-wrapper.sh
 
 %install
 make DESTDIR=%{buildroot}%{_gamesdatadir}/%{name} BINDIR=%{buildroot}/%{_gamesbindir} -f Makefile.linux install
