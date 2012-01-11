@@ -3,7 +3,7 @@ Name:           wizznic
 BuildRequires:  SDL-devel SDL_image-devel SDL_mixer-devel libpng-devel
 Summary:        An implementation of Puzznic
 Version:        0.9.9
-Release:        %mkrel 1
+Release:        %mkrel 0.1
 License:        GPL
 Group:          Games/Boards
 # Downloaded from sourceforge.
