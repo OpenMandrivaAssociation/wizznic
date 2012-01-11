@@ -41,14 +41,14 @@ export CFLAGS="$RPM_OPT_FLAGS"
 echo -e "#!/bin/bash\ncd %{_gamesdatadir}/%{name}/\n%{_bindir}/%{name}-bin \$*\n" > %{name}-wrapper.sh
 
 %install
-make DESTDIR=%{buildroot}%{_gamesdatadir}/%{name} -f Makefile.linux install
+make DESTDIR=%{buildroot}%{_gamesdatadir}/%{name} BINDIR=%{buildroot}/%{_gamesbindir} -f Makefile.linux install
 # Remove doc, as it will be included later
 install -D -m 644 %{S:1} %{buildroot}/%{_gamesdatadir}/applications/%{name}.desktop
 install -d -D -m 755 %{buildroot}/%{_gamesdatadir}/pixmaps/
 ln -s %{_gamesdatadir}/%{name}/data/wmicon.png %{buildroot}/%{_gamesdatadir}/pixmaps/%{name}.png
 
 # install wrapper script
-# mv %{buildroot}/%{_gamesbindir}/%{name} %{buildroot}/%{_gamesbindir}/%{name}-bin
+mv %{buildroot}/%{_gamesbindir}/%{name} %{buildroot}/%{_gamesbindir}/%{name}-bin
 install -D -m 755 %{name}-wrapper.sh %{buildroot}/%{_gamesbindir}/%{name}
 
 
