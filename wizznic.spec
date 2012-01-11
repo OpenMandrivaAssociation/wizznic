@@ -50,7 +50,6 @@ ln -s %{_gamesdatadir}/%{name}/data/wmicon.png %{buildroot}/%{_gamesdatadir}/pix
 
 %files
 %defattr(-,root,root,-)
-%doc changelog.txt 
 %{_gamesbindir}/%{name}
 %dir %{_gamesdatadir}/%{name}/
 %{_gamesdatadir}/%{name}/*
