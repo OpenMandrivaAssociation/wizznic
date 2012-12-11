@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Wizznic!
+Categories=Game;LogicGame;
+Comment=An implementation of Puzznic
+Exec=wizznic -z
+Icon=wizznic
+Terminal=false
+Type=Application
