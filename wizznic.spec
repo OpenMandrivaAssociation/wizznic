@@ -3,7 +3,7 @@
 Name:           wizznic
 Summary:        An implementation of Puzznic
 Version:        0.9.9
-Release:        0.1
+Release:        2
 License:        GPLv3
 Group:          Games/Boards
 Source:         http://downloads.sourceforge.net/%{name}/%{name}-%{version}-src.tar.bz2
@@ -19,7 +19,8 @@ BuildRequires:  pkgconfig(libpng)
 
 %description
 Wizznic is an implementation of Puzznic.
-It is made very easy for non-programmers to contribute Levels/Graphics and sounds. 
+It is made very easy for non-programmers to contribute Levels/Graphics and
+sounds. 
 
 %prep
 %setup -q -n wizznic-0.9.9-src
