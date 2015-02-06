@@ -3,7 +3,7 @@
 Name:           wizznic
 Summary:        An implementation of Puzznic
 Version:        0.9.9
-Release:        2
+Release:        3
 License:        GPLv3
 Group:          Games/Boards
 Source:         http://downloads.sourceforge.net/%{name}/%{name}-%{version}-src.tar.bz2
