@@ -9,7 +9,7 @@ Group:          Games/Boards
 Source:         http://downloads.sourceforge.net/%{name}/%{name}-%{version}-src.tar.bz2
 Source1:        %{name}.desktop
 Patch0:         %{name}-linux.patch
-Url:            http://sourceforge.net/projects/wizznic/
+Url:            https://sourceforge.net/projects/wizznic/
 BuildRequires:  pkgconfig(gl)
 BuildRequires:  pkgconfig(glu)
 BuildRequires:  pkgconfig(SDL_image)
