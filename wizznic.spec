@@ -10,6 +10,7 @@ Source:         http://downloads.sourceforge.net/%{name}/%{name}-%{version}-src.
 Source1:        %{name}.desktop
 Patch0:         %{name}-linux.patch
 Url:            https://sourceforge.net/projects/wizznic/
+BuildRequires:	make
 BuildRequires:  pkgconfig(gl)
 BuildRequires:  pkgconfig(glu)
 BuildRequires:  pkgconfig(SDL_image)
